@@ -1,0 +1,455 @@
+h6{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: rgb(9, 2, 17);
+    margin-bottom: 2rem;
+    text-decoration:underline;
+}
+
+
+/************************************Register***************************************************/
+
+@import url();
+:root{
+    --purple:#8e44ad;
+    --red:#c0392b;
+    --orange:#f39c12;
+    --black:#333;
+    --white:#fff;
+    --light-color:#666;
+    --light-white:#ccc;
+    --light-bg:#f5f5f5;
+    --border:0.5rem solid var(--black);
+    --box-shadow:0.5rem 0.5rem rgba(0,0,0,.1); 
+}
+
+*{
+    font-family: 'Rubik', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 0.2rem;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: var(--white);
+}     
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.container{
+    max-width: 1150px;
+    margin: 0 auto;
+}
+section{
+    padding: 2rem;
+}
+.heading{
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 2rem;
+}
+
+.btn,
+.option-btn,
+.delete-btn,
+.white-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    text-transform: capitalize;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover{
+    background-color: var(--black);
+}
+
+.white-btn,
+.btn{
+    background-color: var(--purple);
+}
+
+.option-btn{
+    background-color:var(--orange);
+}
+
+.delete-btn{
+    background-color: var(--red);
+}
+
+.form-container{
+    min-height: 100vh;
+    background-color: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+
+.form-container form{
+    padding: 2rem;
+    width: 50rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    background-color: var(--white);
+    text-align: center;
+}
+
+.form-container form h3{
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.form-container form .box{
+    width: 100%;
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+    padding: 1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color: var(--black);
+    border:var(--border);
+    margin: 1rem 0;
+}
+
+.form-container form p{
+    padding-top: 1.5rem;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.form-container form p a{
+    color: var(--purple);
+}
+
+.form-container form p a:hover{
+    text-decoration: underline;
+}
+
+
+/************************** product************************************/
+
+
+.product .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35rem);
+    gap: 2rem;
+    justify-content: center;
+}
+.product .box-container .box{
+    text-align: center;
+    padding: 2rem;
+    box-shadow: black;
+    border: var(--border);
+    border-radius: .5rem;
+    
+}
+.product .box-container .box img{
+    height: 25rem;
+}
+.product .box-container h3{
+    margin: 1rem 0;
+    font-size: 2rem;
+    color: black;
+}
+.product .box-container .price{
+    font-size: 2rem;
+    color: black;
+}
+
+/**********************************************Header*******************************************/
+.header{
+    background-color: aqua;
+    position: sticky;
+    top: 0;left: 0;
+    z-index: 1000;
+
+}
+.header .flex{
+    display: flex;
+    align-items: center;
+    padding: 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.header .flex .logo{
+    margin-right: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:bolder;
+    font-size: 4rem;
+    color:black;
+}
+.header .flex .navbar a{
+    margin-left: 6rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+
+}
+.header .flex .navbar a:hover{
+    background-color: rgb(174, 165, 165);
+    padding: 14px 12px;
+
+}
+
+
+
+/****************************************************Add_[Display product]Product*********************************************/
+
+.add-product-form{
+    max-width: 50rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: .2rem;
+    background-color: lightgrey;
+    border: var(--border);
+}
+.add-product-form h3{
+    color: black;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase
+}
+.add-product-form .box{
+    text-transform: none;
+    border-radius: .5rem;
+    padding: 1.2rem .5rem;
+    font-size: 1.7rem;
+    margin: 1rem 0;
+    background-color: white;
+    color: #000;
+    width: 100%;
+    border: var(--border);
+}
+.display-product-table table{
+    width: 100%;
+    text-align: center;
+}
+.display-product-table table thead th{
+    padding: 1.5rem;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+}
+.display-product-table table td{
+    padding: 1.5rem;
+    font-size: 2rem;
+    color: black;
+
+}
+.display-product-table table td:first-child{
+    padding: 0;
+}
+.display-product-table table tr:nth-child(odd){
+    background-color: paleturquoise;
+}
+
+.display-product-table .empty{
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: grey;
+    color: #000;
+    font-size: 2rem;
+    padding: 1.5rem;
+}
+
+/***************************************************************edit_product******************************************/
+
+.edit-form-container{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1100;
+    
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+}
+.edit-form-container form{
+    width: 50rem;
+    border-radius: .5rem;
+    background-color: darkgray;
+    text-align: center;
+    padding: 2rem;
+}
+.edit-form-container form .box{
+    width: 100%;
+    background-color: gray;
+    border-radius: .5rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: black;
+    padding: 1.2rem 1.4rem;
+    text-transform: none;
+}
+
+/************************** product************************************/
+
+
+.product .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 35rem);
+    gap: 2rem;
+    justify-content: center;
+}
+.product .box-container .box{
+    text-align: center;
+    padding: 2rem;
+    box-shadow: black;
+    border: var(--border);
+    border-radius: .5rem;
+    
+}
+.product .box-container .box img{
+    height: 25rem;
+}
+.product .box-container h3{
+    margin: 1rem 0;
+    font-size: 2rem;
+    color: black;
+}
+.product .box-container .price{
+    font-size: 2rem;
+    color: black;
+}
+
+
+
+
+
+/**************************Forget*************************/
+
+h2{
+    text-align: center;
+    font-family:'Gill Sans', Calibri, 'Trebuchet MS';
+    font-size: 1.5rem;
+    text-transform:capitalize;
+    color: black;
+    margin-bottom: 0.5rem;
+}
+
+
+
+/*********************************register list***********************************
+body{
+    font-family: latha;
+    color: white;
+    background:#8e44ad;
+      background-size:cover;
+  }*/
+
+.contain h1{
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif ;
+    text-decoration: underline;
+    margin-top: 30px;
+    text-align:center;
+    color:black;
+   
+  }
+
+
+  td, th {
+    border: 1px solid #999;
+    padding: 20px;
+    font-size: x-small;
+    text-align: center;
+  }
+  th {
+    background: brown;
+    color: black;
+    font-weight:900;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    border-radius: 0;
+    position: sticky;
+    top: 0;
+    padding: 15px;
+  }
+  .primary{
+    background-color: #000000
+  }
+  
+  tfoot > tr  {
+    background: black;
+    color: white;
+  }
+  tbody > tr:hover {
+    background-color: #ffc107;
+  }
+
+
+  /********************************Home Paragraph**************************************/
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .bigimage{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url('admin_book.jpg');
+    background-size: cover;
+  }
+
+  .overlay{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(9, 2, 17);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .overlay p{
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+
+
+
